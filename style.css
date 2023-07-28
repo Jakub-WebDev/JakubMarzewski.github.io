@@ -1,0 +1,222 @@
+*{
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+}
+
+html {
+     scroll-behavior: smooth; 
+}
+
+h1{
+    font-size: 50px;
+}
+
+section{
+    padding-top:100px;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: auto;
+    overflow-y: hidden;
+    min-height: 10xh;
+}
+
+#contact{
+    padding-top: 50px;
+    height: 40vh;
+}
+
+section:nth-child(even){
+    background-color: rgb(235, 235, 235);
+}
+
+section:nth-child(odd){
+    background-color: rgb(245, 245, 245);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 0px solid black;
+}
+
+a.about:hover{
+    border-bottom: 2px solid black;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#home{
+    background: url('background.jpg') no-repeat center center;
+    background-color: rgba(0,0,0);
+    height: 100vh;
+}
+
+#home h1{
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10%;
+    font-family: montserrat;
+    font-weight: 900;
+}
+
+#home h2{
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+
+.flex-container {
+    display: flex;
+    background-color: rgb(255, 255, 255, 0);
+    justify-content: flex-end;
+    transition: 0.3s ease-in-out;
+}
+
+.flex-container div {
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.flex-container div:hover {
+    color: rgb(255, 0, 0);
+}
+
+.flex-container-active{
+    background-color: rgb(255, 255, 255);
+}
+
+.profilePic {
+    float: left;
+    width: 450px;
+    padding: 15px;
+    border-color:black;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-width: 8px;
+}
+
+.icon{
+    width: 25px;
+    margin-right: 10px;
+}
+
+.bigIcon{
+    width: 60px;
+    margin: 40px 0px 20px 20px;
+}
+
+aside h2{
+    display: block;
+    font-size: 40px;
+}
+
+
+aside {
+    display: block;
+    margin-left: 40%;
+    font-size: 20px;
+}
+
+table{
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+tr{
+    width: 50%;
+    height: 60px;
+}
+
+.cv{
+    background-color: red;
+    color: white;
+    padding: 15px;
+}
+.cv:hover{
+    background-color: rgb(225, 0, 0);
+}
+
+section div{
+    margin-top: 10px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 35px 35px;
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
+}
+
+.grid-item{
+    justify-self: center;
+    align-self: center;
+    width: 33vh;
+    aspect-ratio: 1/1;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,.09);
+    transition: box-shadow 0.5s ease-out;
+}
+
+.grid-item:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,.4);
+}
+
+.grid-item h2, .grid-item p{
+    margin-left: 20px;
+}
+
+.grid-item p{
+    font-size: 20px;
+}
+@media (max-width: 768px) {
+    h1 {
+      font-size: 36px;
+    }
+  
+    .profilePic {
+      float: none;
+      width: 100%;
+      padding: 0;
+      border: none;
+    }
+  
+    aside {
+      margin-left: 0;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  
+    .grid-container {
+      grid-template-columns: auto;
+      gap: 20px;
+      height: auto;
+    }
+  
+    .grid-item {
+      justify-self: center;
+      align-self: center;
+      width: 80%;
+      height: auto;
+    }
+  
+    .grid-item h2, .grid-item p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
