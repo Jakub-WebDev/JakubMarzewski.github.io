@@ -18,12 +18,7 @@ h1 {
 }
 
 section {
-  padding-top: 100px;
-  padding-left: 15%;
-  padding-right: 15%;
-  height: auto;
-  overflow-y: hidden;
-  min-height: 10xh;
+  padding: 100px 15%;
 }
 
 #contact {
@@ -37,6 +32,10 @@ section:nth-child(even) {
 
 section:nth-child(odd) {
   background-color: rgb(245, 245, 245);
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 a {
@@ -56,16 +55,20 @@ nav {
 }
 
 #home {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: url("background.jpg") no-repeat center center;
   background-color: rgba(0, 0, 0);
   height: 100vh;
+  text-shadow: 2px 0px 2px black;
 }
 
 #home h1 {
   font-size: 50px;
   text-align: center;
   justify-content: center;
-  margin-top: 10%;
   font-family: montserrat;
   font-weight: 900;
 }
@@ -100,7 +103,8 @@ nav {
 
 .profilePic {
   float: left;
-  width: 450px;
+  width: 50%;
+  max-width: 450px;
   padding: 15px;
   border-color: black;
   border-left-style: solid;
@@ -111,6 +115,7 @@ nav {
 .icon {
   width: 25px;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .bigIcon {
@@ -118,25 +123,18 @@ nav {
   margin: 40px 0px 20px 20px;
 }
 
-aside h2 {
-  display: block;
-  font-size: 40px;
+.info {
+  font-size: 20px;
 }
 
-aside {
+.info h2 {
   display: block;
-  margin-left: 40%;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 table {
   width: 100%;
   margin-bottom: 75px;
-}
-
-tr {
-  width: 50%;
-  height: 60px;
 }
 
 .cv {
@@ -158,13 +156,15 @@ section div {
   gap: 35px 35px;
   justify-content: center;
   align-content: center;
-  height: 80vh;
+  margin-left: -80px;
+  margin-right: -80px;
 }
 
 .grid-item {
+  height: 100%;
   justify-self: center;
   align-self: center;
-  width: 33vh;
+  width: 100%;
   aspect-ratio: 1/1;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
@@ -183,7 +183,7 @@ section div {
 .grid-item p {
   font-size: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 36px;
   }

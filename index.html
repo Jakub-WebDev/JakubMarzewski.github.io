@@ -22,10 +22,10 @@
       <section id="about">
         <h1 style="margin-top: -50px; margin-bottom: 50px">About me</h1>
         <img class="profilePic" src="pic.jpg" alt="My pic" />
-        <aside>
-          <h2><b>I'm Jakub</b></h2>
+        <div class="info">
+          <h2>I'm Jakub</h2>
           <p>
-            Hi, my name is <i style="color: red">Jakub Marzewski</i>. I'm a
+            Hi, my name is <em style="color: red">Jakub Marzewski</em>. I'm a
             passionate and driven aspiring Junior Developer with a solid
             foundation in HTML, CSS, and JavaScript. Eager to leverage my skills
             and knowledge to contribute to dynamic web development projects.
@@ -35,67 +35,66 @@
             passion for creating intuitive user experiences, I would be thrilled
             to contribute to your team.
           </p>
-          <br />
-          <div>
-            <table>
-              <tr>
-                <td>
-                  <img
-                    class="icon"
-                    alt="birthday icon"
-                    src="birthday_icon.png"
-                  /><b>Birthday:</b> 17.02.2002
-                </td>
-                <td>
-                  <img class="icon" alt="age icon" src="age_icon.png" /><b
-                    >Age:</b
-                  ><span id="age"></span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="icon"
-                    alt="university icon"
-                    src="university_icon.png"
-                  /><b>University:</b>
-                  <a class="about" href="https://mans.org.pl/" target="_blank"
-                    >MANS Warszawa</a
-                  >
-                </td>
-                <td>
-                  <img class="icon" alt="degree icon" src="degree_icon.png" /><b
-                    >Degree:</b
-                  >
-                  Bachelor
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="icon"
-                    alt="location icon"
-                    src="location_icon.png"
-                  /><b>Location:</b>
-                  <a
-                    class="about"
-                    href="https://www.google.com/maps/place/Warszawa"
-                    target="_blank"
-                    >Warsaw, Poland</a
-                  >
-                </td>
-                <td>
-                  <img
-                    class="icon"
-                    alt="interests icon"
-                    src="interests_icon.png"
-                  /><b>Interests:</b> Music, Design
-                </td>
-              </tr>
-            </table>
-            <a class="cv" href="cv.pdf" download target="_blank">Download CV</a>
-          </div>
-        </aside>
+
+          <table>
+            <tr>
+              <td>
+                <img
+                  class="icon"
+                  alt="birthday icon"
+                  src="birthday_icon.png"
+                /><strong>Birthday:</strong>
+                17.02.2002
+              </td>
+              <td>
+                <img class="icon" alt="age icon" src="age_icon.png" /><b>Age:</b
+                ><span id="age"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  class="icon"
+                  alt="university icon"
+                  src="university_icon.png"
+                /><strong>University:</strong>
+                <a class="about" href="https://mans.org.pl/" target="_blank"
+                  >MANS Warszawa</a
+                >
+              </td>
+              <td>
+                <img class="icon" alt="degree icon" src="degree_icon.png" /><b
+                  >Degree:</b
+                >
+                Bachelor
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  class="icon"
+                  alt="location icon"
+                  src="location_icon.png"
+                /><strong>Location:</strong>
+                <a
+                  class="about"
+                  href="https://www.google.com/maps/place/Warszawa"
+                  target="_blank"
+                  >Warsaw, Poland</a
+                >
+              </td>
+              <td>
+                <img
+                  class="icon"
+                  alt="interests icon"
+                  src="interests_icon.png"
+                /><strong>Interests:</strong>
+                Music, Design
+              </td>
+            </tr>
+          </table>
+          <a class="cv" href="cv.pdf" download target="_blank">Download CV</a>
+        </div>
       </section>
       <section id="skills">
         <h1>Skills</h1>
@@ -158,23 +157,17 @@
           connecting with you!
         </p>
         <div>
-          <img class="icon" alt="mail icon" src="mail_icon.png" /><b>Email:</b>
+          <img class="icon" alt="mail icon" src="mail_icon.png" />
           kubamarzewski@gmail.com
         </div>
         <div>
-          <img class="icon" alt="phone icon" src="phone_icon.png" /><b
-            >Phone:</b
-          >
+          <img class="icon" alt="phone icon" src="phone_icon.png" />
           510 628 372
         </div>
         <div>
-          <img class="icon" alt="Linkedin logo" src="linkedin_icon.png" /><b
-            >Linkedin:</b
-          ><a
-            href="https://www.linkedin.com/in/jakub-marzewski-821940261/"
-            target="_blank"
-          >
-            https://www.linkedin.com/in/jakub-marzewski-821940261/</a
+          <img class="icon" alt="Linkedin logo" src="linkedin_icon.png" />
+          <a href="https://www.linkedin.com/in/jakub-marzewski/" target="_blank"
+            >https://www.linkedin.com/in/jakub-marzewski/</a
           >
         </div>
       </section>
@@ -184,13 +177,12 @@
       const age = date.getFullYear() - 2001;
       document.getElementById("age").innerHTML = " " + age;
 
+      const activeClassName = "flex-container-active";
       const navbar = document.querySelector(".flex-container");
       window.onscroll = () => {
-        if (window.scrollY > 300) {
-          navbar.classList.add("flex-container-active");
-        } else {
-          navbar.classList.remove("flex-container-active");
-        }
+        window.scrollY > 300
+          ? navbar.classList.add(activeClassName)
+          : navbar.classList.remove(activeClassName);
       };
     </script>
   </body>
