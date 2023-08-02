@@ -1,2 +1,2 @@
 Visit site at:
-https://jakubmarzewski.github.io/JakubMarzewski.github.oi/
+https://jakubmarzewski.github.io
