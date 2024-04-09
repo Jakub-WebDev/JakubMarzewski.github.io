@@ -1,2 +1,2 @@
 Visit site at:
-[https://jakub-WebDev.github.io](https://jakub-webdev.github.io/JakubMarzewski.github.io/)
+[https://Jakub-WebDev.github.io](https://jakub-webdev.github.io/JakubMarzewski.github.io/)
